@@ -9,6 +9,7 @@ import { Carousel } from 'react-responsive-carousel';
 import image1 from '../assets/capa3.png';
 import image2 from '../assets/capa.png';
 import image3 from '../assets/capa2.png';
+import image4 from '../assets/capa4.png';
 
 const Header = () => {
 
@@ -133,7 +134,7 @@ const Header = () => {
           },
         })}
       >
-               <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
+               <Carousel autoPlay={true} interval={2000} infiniteLoop={true}>
           {/* Slides do carrossel */}
           <div>
             <img src={image1} alt="Slide 1" style={{ maxWidth: '100%' }} />
@@ -144,7 +145,9 @@ const Header = () => {
           <div>
             <img src={image3} alt="Slide 3" style={{ maxWidth: '100%' }}/>
           </div>
-          
+          <div>
+            <img src={image4} alt="Slide 3" style={{ maxWidth: '100%' }}/>
+          </div>
           
         </Carousel>
             </Box>

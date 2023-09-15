@@ -1,23 +1,51 @@
-import React from 'react'
+
 import {  
     Box,
     Button,
     Stack,
-    TextField
+    TextField,
+    TextareaAutosize,
 } from '@mui/material'
 import Title from './Title'
 import Paragraph from './Paragraph'
+import emailjs from '@emailjs/browser'
+import React, { useState } from 'react';
 
 
 const Details = () => {
+    const [email, setEmail] = useState(''); // Declare email como um estado
+    const [phone, setPhone] = useState(''); // Declare phone como um estado
+
+
+        
+       
+    
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            phone: data.get('phone'),
-        });
+        const emailValue = data.get('email');
+        const phoneValue = data.get('phone');
+        console.log('Email:', emailValue);
+        console.log('Phone:', phoneValue);
+    
+    setEmail(emailValue);
+    setPhone(phoneValue);
+
+
+        const templateParams = {
+            from_email: email,
+            from_phone: phone,
+        }
+        console.log('templateParams:', templateParams);
+        emailjs.send('service_e4i3boy','template_rv49ngu',templateParams,'cZ_9OYH87Y9tEeJWx')
+        .then((response) => {
+          console.log("Email Enviado", response.status, response.text)
+          setEmail ('')
+          setPhone ('')
+        }, (err) => {
+         console.log ('Erro: ', err)
+        })
     }
 
 
@@ -77,6 +105,17 @@ const Details = () => {
                     id="phone"
                     autoComplete="current-phone"
                 />
+                <TextareaAutosize
+          margin='normal'
+          required
+          fullWidth
+          name='message' // Nome adicionado para a mensagem
+          label='Message'
+          id='message'
+          autoComplete='current-message'
+          minRows={3} // Número mínimo de linhas
+          placeholder='Digite sua mensagem...'
+        />
                 <Button 
                 variant="contained" 
                 fullWidth

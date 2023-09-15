@@ -56,17 +56,20 @@ const Footer = () => {
       </StackColumn>
       
       <StackColumn>
-        <FooterTitle text={'our services'} />
-        <FooterLink text={'buy house'} />
-        <FooterLink text={'sell house'} />
-        <FooterLink text={'rent house'} />
-        <FooterLink text={'build house'} />
+        <FooterTitle text={'Nossos Serviços'} />
+        <FooterLink text={'Janelas'} />
+        <FooterLink text={'Box'} />
+        <FooterLink text={'Espelhos'} />
+        <FooterLink text={'Portas'} />
+        <FooterLink text={'Sacadas'} />
+        <FooterLink text={'fachadas'} />
+        <FooterLink text={'Guarda corpo'} />
       </StackColumn>
       <StackColumn>
-        <FooterTitle text={'our company'} />
-        <FooterLink text={'reporting'} />
-        <FooterLink text={'get in touch'} />
-        <FooterLink text={'management'} />
+        <FooterTitle text={'Nossa Empresa'} />
+        <FooterLink text={'Faça seu Orçamento'} />
+        <FooterLink text={'Trabalhe conosco'} />
+        
       </StackColumn>
 
       <StackColumn>
