@@ -41,6 +41,10 @@ const itemList = [
       to: "/about"
     },
     {
+        text: "Serviços",
+        to: "/service"
+      },
+    {
         text: "Contato",
         to: "/contact"
     }
