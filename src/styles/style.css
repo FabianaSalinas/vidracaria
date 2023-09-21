@@ -1,0 +1,18 @@
+
+
+/*information*/
+.men {
+  
+  width: 40%;
+}
+
+@media (max-width: 1000px) {
+ 
+  .men {
+      display: none;
+  }
+}
+
+
+/*Products*/
+

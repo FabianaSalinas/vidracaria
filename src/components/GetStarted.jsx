@@ -11,6 +11,8 @@ import imgDetail from '../assets/home.jpg';
 import imgDetail2 from '../assets/reparo.png';
 
 
+
+
 const GetStarted = () => {
 
     const CustomGridItem = styled(Grid) ({
@@ -30,7 +32,7 @@ const GetStarted = () => {
 
     return (
             
-        <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}   
+        <Grid  container spacing={{ xs: 4, sm: 4, md: 0 }}   
         sx={{
             py: 10,
             px: 2,

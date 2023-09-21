@@ -1,25 +1,32 @@
-
 import React from 'react'
 import { 
   Box, 
   Stack, 
-  styled, 
+  styled,
+  Button, 
+  
   
 } from '@mui/material'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import SendIcon from '@mui/icons-material/Send';
+
+import '../styles/style.css'
 
 import imgMen from '../assets/men.png';
-import fundoAzul from '../assets/fundoAzul.png'
+import fundoAzul from '../assets/fundoAzul.png';
 
 
 
 
 const Information = () => {
 
+
     const StackColumn = styled(Stack) (() => ({
-      flexDirection: 'column',
-      justifyContent: 'flex-start',
+      
+      display:'flex',
       alignItems: 'center',
       flex: 1,
+      flexDirection: 'column', // Altere a direção para uma coluna
       gap: 8,
       textAlign: 'center',
       position: 'relative',
@@ -42,34 +49,88 @@ const Information = () => {
     }));
 
     const imgStyle = {
-      width: '40%', 
+       
       height: 'auto', 
-      paddingLeft: '70%',
+      float: 'right',
       
-      
-      
-    }; ;;;
-   
+    }; 
+
+    
+  const textStyle = {
+    fontSize: '40px', // Ajuste o tamanho do texto aqui
+    color: 'white',
+    flex: 1, // Expande o texto para preencher o espaço disponível
+    marginRight: '20px',
+    marginTop: '70px',
+    
+  };
+
+  const buttonStyle = {
+    fontSize: '16px', // Ajuste o tamanho do texto dos botões aqui
+    padding: '16px ',
+    width: '250px',
+    marginLeft:'30px',
+    marginTop: '30px',
+    
+
+  };
+
+  const buttonContainerStyle = {
+    paddingBottom: '100px' , 
+    flexDirection:'row'   
+  };
+
+  
+
   
     return (
-      
-      <BoxRow 
-      component = 'information'
-      sx={{
-        py: 4,
-        px: 2,
-      }}
+      <BoxRow
+        component="information"
+        sx={{
+          py: 4,
+          px: 2,
+          paddingBottom: 0,
+          paddingTop: 0,
+        }}
       >
-        <StackColumn>
-     
-<body>
-    <div class="container">
-        <img src={imgMen} alt="Homem Apontando" class="imagem-direita" style={imgStyle} />
-    </div>
-</body>
-        </StackColumn>
+            <StackColumn>
+        <h1 style={textStyle}>Dúvidas ou Orçamento? Estamos Aqui para Ajudar! Entre em Contato Conosco.</h1>
+        <div style={buttonContainerStyle}>
+          <Button
+           className='botaoWhats'
+           variant="contained" 
+           color="primary" 
+           style={buttonStyle}
+           onClick={() => {
+        // Adicione aqui a lógica para abrir o link do WhatsApp
+        window.location.href = 'https://api.whatsapp.com/send?phone=11981487235';
+      }}
+           >
+           <WhatsAppIcon style={{ marginRight: '10px' }} /> Whatsapp
+          </Button>
+          <Button 
+          className='botaoOrcamento' 
+          variant="contained" 
+          color="primary" 
+          style={buttonStyle}
+          onClick={() => {
+        
+            window.location.href = '/contact'; 
+          }}>
+          <SendIcon style={{ marginRight: '10px' }} />Envie mensagem
+          </Button>
+        </div>
+      </StackColumn>
+       
+          <img 
+            src={imgMen}
+            alt="Homem Apontando"
+            className="men"
+            style={imgStyle}
+          />
+        
       </BoxRow>
-    )
-  }
-
-  export default Information
+    );
+  };
+  
+  export default Information;

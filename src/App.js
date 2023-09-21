@@ -1,6 +1,9 @@
 import React from'react';
+
+
 //rotas
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 //pages
 import Home from './pages/Home';
 import About from './pages/About';
