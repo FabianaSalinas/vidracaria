@@ -15,4 +15,17 @@
 
 
 /*Products*/
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Define 4 colunas iguais */
+  gap: 20px; /* Espaçamento entre os cartões */
+  padding: 20px;
+}
+
+.product-card {
+  max-width: 100%;
+}
+
+
+
 
