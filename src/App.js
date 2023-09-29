@@ -1,8 +1,9 @@
-import React from'react';
+import React from'react'
 
 
 //rotas
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 //pages
 import Home from './pages/Home';
@@ -13,18 +14,28 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer/Footer';
 
+
+
+import ProductDetail from './components/ProductsDetail';
+import ProductsInfo from './components/ProductsInfo';
+
+
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/service' element={<Service />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path="/product/:id" element={<ProductDetail products={ProductsInfo} />} />
+          
+
         </Routes>
-      </BrowserRouter>
+      </Router>
+      
       <Footer />
     </>
   );
