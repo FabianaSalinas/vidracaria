@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.09c8173c.css",
+    "main.js": "/static/js/main.510e9d01.js",
+    "static/media/capa.png": "/static/media/capa.50cc0f8ace6b7fa46d6f.png",
+    "static/media/capa2.png": "/static/media/capa2.fdfcd42680e623e09b1b.png",
+    "static/media/capa3.png": "/static/media/capa3.b3147f71b61932463336.png",
+    "static/media/sacadaProdutos.png": "/static/media/sacadaProdutos.f932c41890cdda11170a.png",
+    "static/media/reparo.png": "/static/media/reparo.7ba06266ee4c25e5e68f.png",
+    "static/media/capa4.png": "/static/media/capa4.baed29f2ef625320f1c7.png",
+    "static/media/janelaProdutos.png": "/static/media/janelaProdutos.ef362bea5672f2e05340.png",
+    "static/media/men.png": "/static/media/men.37d67f8dc5ac131fc8b2.png",
+    "static/media/fundoAzul.png": "/static/media/fundoAzul.bfff1e028b91ce0aa8d4.png",
+    "static/media/aquarioProdutos.jpg": "/static/media/aquarioProdutos.2c9e7dd07f52a5dedff5.jpg",
+    "static/media/guardaProdutos.jpg": "/static/media/guardaProdutos.f5db11911a0055a788b4.jpg",
+    "static/media/coberturaProdutos.jpg": "/static/media/coberturaProdutos.bac7ddfa7e3b41ae23d2.jpg",
+    "static/media/boxProdutos2.png": "/static/media/boxProdutos2.aa1016bb57bab76acfe7.png",
+    "static/media/home.jpg": "/static/media/home.201d653090fb3eaaef83.jpg",
+    "static/media/abrigoProdutos.jpg": "/static/media/abrigoProdutos.dd65cde59c34c27a391f.jpg",
+    "static/media/logo1.png": "/static/media/logo1.69a69e0f21bbbae51f23.png",
+    "static/media/paredeProdutos.webp": "/static/media/paredeProdutos.fda4acd5b3b61c121a0d.webp",
+    "static/media/logo.png": "/static/media/logo.7b942d174d1032cbb68c.png",
+    "static/media/portaProdutos.jpg": "/static/media/portaProdutos.88839535b3d88c74b1e2.jpg",
+    "static/media/espelhoProdutos.webp": "/static/media/espelhoProdutos.e9e9aacabf44150221e5.webp",
+    "static/media/sombra3.png": "/static/media/sombra3.0ab7e4e7dc7bfb2b7fc2.png",
+    "index.html": "/index.html",
+    "main.09c8173c.css.map": "/static/css/main.09c8173c.css.map",
+    "main.510e9d01.js.map": "/static/js/main.510e9d01.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09c8173c.css",
+    "static/js/main.510e9d01.js"
+  ]
+}
