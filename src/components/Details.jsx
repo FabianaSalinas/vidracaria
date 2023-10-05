@@ -151,7 +151,7 @@ const Details = () => {
                     }
                 }}
                 >
-                    send
+                    Enviar Orçamento
                 </Button>
             </Box>
         </Stack>

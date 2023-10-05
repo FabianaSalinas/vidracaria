@@ -3,6 +3,8 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from 'react-router-dom'
 //img
 import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 //import headerImg from '../assets/imghome.png'
 
 // Importe suas imagens do carrossel
@@ -55,7 +57,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    Soluções transparentes para a sua vida.
+                    Vidraçaria na grande São Paulo.
                 </Typography>
 
                 <Typography
@@ -72,6 +74,8 @@ const Header = () => {
 
                 <Box>
                     <Button 
+                    component={Link} 
+                    to={'/contact'}
                     variant='contained'
                     sx={{
                         mr: 2,
@@ -91,11 +95,11 @@ const Header = () => {
                         }
                     }}
                     >
-                        buy now
+                        Orçamento
                     </Button>
                     <Button 
                     component={Link} 
-                    to={'/about'}
+                    to={'/contact'}
                     variant='outlined'
                     sx={{
                         px: 4, 

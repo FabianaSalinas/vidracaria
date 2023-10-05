@@ -2,34 +2,24 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importe o estilo do carrossel
+
 
 import "../styles/style.css"
 
 // Importe as imagens que você deseja exibir no carrossel
-import companyImage1 from '../assets/sacadaComeia.png';
-import companyImage2 from '../assets/home.jpg';
-import companyImage3 from '../assets/capa2.png';
+
+import companyImage3 from '../assets/logo1.png';
 
 const Company = () => {
   return (
     <div className="about-container">
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} className="about-image-container">
-          <Carousel showThumbs={false} infiniteLoop autoPlay>
-            <div>
-              <img src={companyImage1} alt="Company 1" />
-            </div>
-            <div>
-              <img src={companyImage2} alt="Company 2" />
-            </div>
-            <div>
+      <Grid className='box' container spacing={1}>
+        <Grid item xs={8} sm={4} className="about-image-container">
+         
               <img src={companyImage3} alt="Company 3" />
-            </div>
-          </Carousel>
+            
         </Grid>
-        <Grid item xs={12} sm={6} className="about-text-container">
+        <Grid item xs={8} sm={4} className="about-text-container">
         <Typography variant="h4" gutterBottom style={{ paddingTop: '100px' , textAlign: 'center', paddingRight: '100px'}}>
             Sobre Nossa Empresa
           </Typography>

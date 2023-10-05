@@ -1,0 +1,137 @@
+/*Products*/
+.product-info {
+  padding: 10px;
+  color: aliceblue;
+  position: absolute;
+  bottom: 0; /* Coloque no canto inferior */
+  left: 0;
+  right: 0;
+  text-align: center; /* Centralize o texto horizontalmente */
+  z-index: 3;
+  transform: scale(1); /* Adicione uma escala inicial para o texto */
+  transition: transform 0.3s ease; /* Adicione uma transição para o efeito de aumento de tamanho */
+  
+}
+
+.product-info h2,
+.product-info p {
+  margin: 0;
+}
+
+.product-info h2 {
+  font-size: 2.5rem; /* Tamanho do título */
+  text-align: center; /* Centralize o texto do título */
+  font-family: 'Archivo Black', sans-serif;
+
+  
+}
+
+.product-info p {
+  font-size: 1rem; /* Tamanho da descrição */
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Define 4 colunas iguais */
+  gap: 1px; /* Espaçamento entre os cartões */
+  padding: 20px;
+  background-color: #ffffff;
+  padding-left: 20px;
+  
+}
+@media (max-width: 1300px) {
+ 
+  .product-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+ 
+  .product-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+ 
+  .product-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  border: 1px solid #6d6c6c; /* Adicione uma borda */
+  margin: 1px; /* Adicione uma margem para espaçamento entre os cartões */
+  padding: 1px; /* Adicione um preenchimento interno opcional */
+  display: flex;
+  flex-direction: column; /* Altere para uma orientação de coluna */
+  background-color: rgb(240, 250, 255);
+  z-index: 1;
+  
+
+}
+.info-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  text-decoration: none;
+  border: 1px solid #007bff; /* Borda do botão */
+  border-radius: 5px; /* Cantos arredondados */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao passar o mouse */
+  margin-right: 10px;
+  z-index: 3;
+}
+
+.info-button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+
+
+.top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.product-card:hover {
+ 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a elevação das letras */
+  transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+  transition: filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transições suaves ao passar o mouse */
+  z-index: 0;
+}
+
+
+.product-card .info-button {
+  display: none; /* Inicialmente, os botões estão invisíveis */
+
+}
+
+.product-card:hover .info-button {
+  display: block; /* Torna os botões visíveis ao passar o mouse */
+  margin-top: 10px;
+  z-index: 3;
+ 
+}
+
+.product-card:hover .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center;
+  height: 100%; /* Define a altura para ocupar todo o card */
+  z-index: 2;
+  transform: scale(1.1);
+   background-color: rgba(43, 43, 43, 0.637)
+}
