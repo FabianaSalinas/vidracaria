@@ -35,6 +35,12 @@ const ProductsInfo = [
       title: 'Janelas',
       description: 'Janelas de vidro, Janelas basculante.',
       image: janelaProdutos,
+      info: 'As sacadas de vidro se tornaram uma escolha popular para aqueles que buscam combinar elegância,\
+      funcionalidade e uma conexão direta com o ambiente externo. Essas estruturas oferecem uma série de benefícios\
+       que podem aprimorar significativamente a qualidade de vida e o valor estético de uma residência. Quando se trata \
+       de sacadas de vidro, a versatilidade é uma das maiores vantagens. Elas podem ser personalizadas em uma variedade de\
+        estilos e cores para atender às preferências individuais. ',
+     list: ' Vidros:, incolor, verde, fume'
     },
     {
       id: 4,
