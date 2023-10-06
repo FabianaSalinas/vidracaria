@@ -38,6 +38,11 @@ const itemList = [
     to: "/"
   },
   {
+    text: "Serviços",
+    icon: <InfoIcon />,
+    to: "/service"
+  },
+  {
     text: "About",
     icon: <InfoIcon />,
     to: "/about"
