@@ -158,4 +158,4 @@ const Details = () => {
     )
 }
 
-export default Details;s
+export default Details;
