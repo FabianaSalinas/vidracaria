@@ -5,17 +5,30 @@ import { Link } from 'react-router-dom'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import '../styles/style.css'
+
 //import headerImg from '../assets/imghome.png'
 
 // Importe suas imagens do carrossel
-import image1 from '../assets/capa3.png';
-import image2 from '../assets/capa.png';
-import image3 from '../assets/capa2.png';
-import image4 from '../assets/capa4.png';
+import image1 from '../assets/capaHome.png';
+import image2 from '../assets/capaHome2.png';
+import image3 from '../assets/capaHome3.png';
+import image4 from '../assets/capaHome4.png';
+import image5 from '../assets/capaHome5.png';
+import image6 from '../assets/capaHome6.png';
+import image7 from '../assets/capaHome7.png';
+import image8 from '../assets/capaHome8.png';
+import image9 from '../assets/capaHome9.png';
+import image10 from '../assets/capaHome10.png';
+import image11 from '../assets/capaHome11.png';
+import image12 from '../assets/capaHome12.png';
+//img fundo home
+
 
 const Header = () => {
 
     const CustomBox = styled(Box) (({ theme }) => ({
+        position: 'relative',
         minHeight: '80vh',
         display: 'flex',
         justifyContent: 'center',
@@ -23,7 +36,7 @@ const Header = () => {
         gap: theme.spacing(2),
         paddingTop: theme.spacing(10),
         // cor de fundo
-        backgroundColor: '#77c8ee',
+     
         [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             alignItems: 'center',
@@ -33,29 +46,41 @@ const Header = () => {
 
     const BoxText = styled(Box) (({ theme }) => ({
         flex: '1',
+        paddingTop: 420,
+        zIndex:3,
         paddingLeft: theme.spacing(8),
         [theme.breakpoints.down('md')]: {
             flex: '2',
             textAlign: 'center',
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
+            
+            
         },
     }));
-
+    const CarouselContainer = styled(Box)({
+        position: 'absolute', // Defina a posição como absoluta para que o carrossel se sobreponha ao plano de fundo
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        overflow: 'hidden',
+      });
+    
 
   return  (
         <CustomBox component='header'>
-            {/*  Box text  */}
+            
             <BoxText 
             component='section'
+            
             >
                 <Typography
                 variant='h2'
                 component= 'h1'
-                sx={{
-                    fontWeight: 700,
-                    color: '#fff',
-                }}
+                className='textHome'
+              
                 >
                     Vidraçaria na grande São Paulo.
                 </Typography>
@@ -63,10 +88,9 @@ const Header = () => {
                 <Typography
                 variant='p'
                 component='p'
+                className='subTextHome'
                 sx={{
                     py: 3,
-                    lineHeight: 1.6,
-                    color: '#fff',
                 }}
                 >
                     Transformando sonhos em realidade, nossa vidraçaria oferece soluções elegantes e sob medida para dar vida e luz ao seu espaço.
@@ -124,7 +148,7 @@ const Header = () => {
                     </Button>
                 </Box>
             </BoxText>
-
+       
             <Box
         sx={theme => ({
           [theme.breakpoints.down('md')]: {
@@ -138,7 +162,12 @@ const Header = () => {
           },
         })}
       >
-               <Carousel autoPlay={true} interval={2000} infiniteLoop={true}>
+        <CarouselContainer>
+               <Carousel 
+               autoPlay={true} 
+               interval={2000} 
+               infiniteLoop={true}
+               className="carousel">
           {/* Slides do carrossel */}
           <div>
             <img src={image1} alt="Slide 1" style={{ maxWidth: '100%' }} />
@@ -150,10 +179,35 @@ const Header = () => {
             <img src={image3} alt="Slide 3" style={{ maxWidth: '100%' }}/>
           </div>
           <div>
-            <img src={image4} alt="Slide 3" style={{ maxWidth: '100%' }}/>
+            <img src={image4} alt="Slide 4" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image5} alt="Slide 5" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image6} alt="Slide 6" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image7} alt="Slide 7" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image8} alt="Slide 8" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image9} alt="Slide 9" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image10} alt="Slide 10" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image11} alt="Slide 11" style={{ maxWidth: '100%' }}/>
+          </div>
+          <div>
+            <img src={image12} alt="Slide 12" style={{ maxWidth: '100%' }}/>
           </div>
           
         </Carousel>
+        </CarouselContainer>
             </Box>
 
         </CustomBox>

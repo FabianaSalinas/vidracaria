@@ -80,3 +80,54 @@ justify-content: center;
   width: 500px;
   height: 350px;
 }
+
+/*header*/
+/* Estilo personalizado para o contêiner do carrossel */
+.carousel-container {
+  max-height: calc(100vh - 420px); /* Ajuste conforme necessário */
+  overflow: hidden;
+}
+
+/* Estilo personalizado para o carrossel dentro do contêiner */
+.carousel {
+  max-height: 100%;
+  width: 100%;
+}
+
+
+.textHome{
+  color: #fff;
+  font-weight: 700!important;
+
+}
+@media (max-width: 1030px) {
+ 
+  .textHome {
+      color: black;
+      padding-top: 100!important;
+  }
+}
+
+
+.subTextHome{
+  line-height:1.6 ;
+  color: #fff;
+ 
+}
+
+@media (max-width: 1000px) {
+ 
+  .subTextHome {
+      color: black;
+  }
+}
+
+@media (max-width: 1000px) {
+ 
+  .azulHome {
+    
+      display:none;
+      
+  }
+}
+
