@@ -1,4 +1,6 @@
 import React from 'react'
+import useTheme from '@mui/material/styles/useTheme';
+import useMediaQuery from '@mui/material/useMediaQuery';
 // mui
 import { 
     Box,
@@ -12,51 +14,57 @@ import Title from './Title'
 import Paragraph from './Paragraph'
 
 
+
+
+
+
 const Gallery = () => {
-    
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     
 
 
 
     const itemData = [
         {
-          img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+          img: require('../assets/gallery1.jpg'),
           title: 'Breakfast',
         },
         {
-          img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+          img: require('../assets/gallery2.jpg'),
           title: 'Burger',
         },
         {
-          img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+          img: require('../assets/gallery3.jpg'),
           title: 'Camera',
         },
         {
-          img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+          img: require('../assets/gallery4.jpg'),
           title: 'Coffee',
         },
         {
-          img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+          img: require('../assets/gallery5.jpg'),
           title: 'Hats',
         },
         {
-          img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+          img: require('../assets/gallery6.jpg'),
           title: 'Honey',
         },
         {
-          img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+          img: require('../assets/gallery7.jpg'),
           title: 'Basketball',
         },
         {
-          img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+          img: require('../assets/gallery8.jpg'),
           title: 'Fern',
         },
         {
-          img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+          img: require('../assets/gallery9.jpg'),
           title: 'Mushrooms',
         },
         {
-          img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+          img: require('../assets/gallery10.jpg'),
           title: 'Tomato basil',
         },
         {
@@ -89,13 +97,12 @@ const Gallery = () => {
             }}
             >
                 <Title 
-                text={
-                    'Nossos serviços'
-                }
+                text={'Nossos serviços'}
                 textAlign={'center'}
                 />
                 
-                <Paragraph text={
+                <Paragraph 
+                text={
                     'Nosso histórico é marcado por uma extensa\
                      lista de serviços executados com excepcional \
                      excelência ao longo do tempo.'
@@ -107,15 +114,24 @@ const Gallery = () => {
             </Box>
             
           
-            <ImageList sx={{ width: '60%', height: '60%' }} cols={4} rowHeight={250}>
+            <ImageList
+        sx={{
+          width: isSmallScreen ? '100%' : '70%',
+          height: 'auto',
+          marginBottom: isSmallScreen ? 3 : 0,
+        }}
+        cols={isSmallScreen ? 2 : 4}
+        rowHeight={isSmallScreen ? 200 : 350}
+      >
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
-          <img
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            alt={item.title}
-            loading="lazy"
-          />
+        <img
+          srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+          src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+          alt={item.title}
+          loading="lazy"
+          style={{ borderRadius: '8px' }}
+        />
         </ImageListItem>
       ))}
     </ImageList>

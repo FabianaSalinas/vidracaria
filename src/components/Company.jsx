@@ -11,19 +11,25 @@ import "../styles/style.css"
 import companyImage3 from '../assets/logo1.png';
 
 const Company = () => {
+
+  
   return (
     <div className="about-container">
       <Grid className='box' container spacing={1}>
         <Grid item xs={8} sm={4} className="about-image-container">
          
-              <img src={companyImage3} alt="Company 3" />
+              <img src={companyImage3} alt="Company 3"  style={{ maxWidth: '80%' }} />
             
         </Grid>
         <Grid item xs={8} sm={4} className="about-text-container">
-        <Typography variant="h4" gutterBottom style={{ paddingTop: '100px' , textAlign: 'center', paddingRight: '100px'}}>
+        <Typography 
+        variant="h4" 
+        gutterBottom
+        className='about-text' 
+        >
             Sobre Nossa Empresa
           </Typography>
-          <Typography variant="body1" >
+          <Typography variant="body1"  style={{ wordWrap: 'break-word' }}>
           "A Vidraçaria Dalton, localizada na zona leste de São Paulo, atende essa região e arredores por mais de 10 anos. 
            Com experiência e dedicação, somos referência em serviços de vidros na área.
            Especializados em envidraçamento de todos os tipos, oferecemos serviços abrangentes, 
